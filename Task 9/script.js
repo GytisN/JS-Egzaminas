@@ -15,11 +15,9 @@ būti stilizuota su CSS ir būti responsive;
 const ENDPOINT = 'https://api.github.com/users';
 let usersData = null;
 
-// 1. Susiziureti reikiamus HTML objektus ir susirasyti juos i kintamuosius
 const btn = document.querySelector("#btn");
 const output = document.querySelector("#output");
 
-// 2. Gauti duomenis ir API
 async function getUsersList() {
     const response = await fetch(ENDPOINT, {
         method: "GET"
@@ -68,8 +66,6 @@ btn.addEventListener("click", function() {
     btn.classList.toggle("active");
     
     if(btn.classList.contains("active")) {
-        // onButtonClick();
-        console.log(usersData)
         if (!usersData) {
             onButtonClick();
         } else {
